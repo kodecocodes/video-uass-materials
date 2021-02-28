@@ -30,43 +30,19 @@ import SwiftUI
 
 struct ContentView: View {
   @State var artworks = artData
-  @State private var hideVisited = false
-  var showArt: [Artwork] {
-    hideVisited ? artworks.filter { $0.reaction == .none } : artworks
-  }
-  
-  private func setReaction(_ reaction: Artwork.reactionEmoji, for item: Artwork) {
-    if let index = self.artworks.firstIndex(
-      where: { $0.id == item.id }) {
-      self.artworks[index].reaction = reaction
-    }
-  }
-  
+
   var body: some View {
     NavigationView {
-      List(showArt) { artwork in
+      List(artworks) { artwork in
         NavigationLink(
         destination: DetailView(artwork: artwork)) {
-          Text(artwork.reaction.rawValue + artwork.title)
+          Text(artwork.title)
             .font(.body)
-            .accessibility(label: Text(artwork.reaction.reactionWord() + artwork.title))
-            .contextMenu {
-              Button("Love it: 💕") {
-                self.setReaction(.love, for: artwork)
-              }
-              Button("Thoughtful: 🙏") {
-                self.setReaction(.thoughtful, for: artwork)
-              }
-              Button("Wow!: 🌟") {
-                self.setReaction(.wow, for: artwork)
-              }
-          }
+            .accessibility(label: Text(artwork.title))
         }
       }
       .navigationBarTitle("Artworks")
-      .navigationBarItems(trailing:
-        Toggle(isOn: $hideVisited, label: { Text("Hide Visited") }))
-      
+
       DetailView(artwork: artworks[0])
     }
     .padding(1)

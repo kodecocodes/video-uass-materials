@@ -30,31 +30,16 @@ import SwiftUI
 
 struct DetailView: View {
   let artwork: Artwork
-  @State private var showMap = false
-  
+
   var body: some View {
     VStack {
       Image(artwork.imageName, label: Text(artwork.title))
         .resizable()
         .frame(maxWidth: 300, maxHeight: 600)
         .aspectRatio(contentMode: .fit)
-        .onTapGesture { self.showMap = true }
-        .accessibility(addTraits: .isButton)
-        .accessibility(hint: Text("Opens Map"))
-      Text(artwork.reaction.rawValue + artwork.title)
-        .accessibility(label: Text(artwork.reaction.reactionWord() + artwork.title))
+      Text(artwork.title)
+        .accessibility(label: Text(artwork.title))
         .font(.headline)
-      HStack {
-        Button(action: { self.showMap = true }) {
-          Image(systemName: "mappin.and.ellipse")
-            .accessibility(label: Text("Open Map"))
-        }
-        .sheet(isPresented: $showMap) {
-          LocationMap(showModal: self.$showMap, artwork: self.artwork)
-        }
-        Text(artwork.locationName)
-          .font(.subheadline)
-      }
       Text("Artist: \(artwork.artist)")
         .font(.subheadline)
       Divider()

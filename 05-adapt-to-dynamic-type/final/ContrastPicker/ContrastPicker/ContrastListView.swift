@@ -69,7 +69,7 @@ struct ListCellView: View {
         .sheet(isPresented: $editColors) {
           ColorPicker(contrast: self.$contrast)
         }
-        HStack {
+        AdaptingStack {
           Text("Text \(contrast.text.description)")
             .accessibility(label: Text("For Text color "
             + contrast.text.accDescription))

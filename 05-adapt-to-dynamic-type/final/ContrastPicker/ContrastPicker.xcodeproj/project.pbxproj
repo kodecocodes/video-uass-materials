@@ -16,6 +16,7 @@
 		CDBCAB57238B2C230089E25F /* ContrastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBCAB56238B2C230089E25F /* ContrastModel.swift */; };
 		CDBCAB59238B33620089E25F /* ContrastListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBCAB58238B33620089E25F /* ContrastListView.swift */; };
 		DCA6ACE625EC1D9600EF9877 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6ACE525EC1D9600EF9877 /* AppMain.swift */; };
+		DCA6ACFC25EC2B0100EF9877 /* AdaptingStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6ACFB25EC2B0100EF9877 /* AdaptingStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CDBCAB56238B2C230089E25F /* ContrastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastModel.swift; sourceTree = "<group>"; };
 		CDBCAB58238B33620089E25F /* ContrastListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastListView.swift; sourceTree = "<group>"; };
 		DCA6ACE525EC1D9600EF9877 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
+		DCA6ACFB25EC2B0100EF9877 /* AdaptingStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptingStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CDB0BB55238A2068006DC0CD /* ColorPicker.swift */,
 				CDBCAB54238B2ADF0089E25F /* ContrastViewModel.swift */,
 				CDBCAB56238B2C230089E25F /* ContrastModel.swift */,
+				DCA6ACFB25EC2B0100EF9877 /* AdaptingStack.swift */,
 				CDB0B981238770E6006DC0CD /* Info.plist */,
 				CDBCAB53238B2A790089E25F /* Supporting Files */,
 				CDB0B97B238770E6006DC0CD /* Preview Content */,
@@ -167,6 +170,7 @@
 				CDBCAB55238B2ADF0089E25F /* ContrastViewModel.swift in Sources */,
 				CDB0BB522389F7CB006DC0CD /* RGB.swift in Sources */,
 				CDBCAB59238B33620089E25F /* ContrastListView.swift in Sources */,
+				DCA6ACFC25EC2B0100EF9877 /* AdaptingStack.swift in Sources */,
 				DCA6ACE625EC1D9600EF9877 /* AppMain.swift in Sources */,
 				CDB0BB56238A2068006DC0CD /* ColorPicker.swift in Sources */,
 			);

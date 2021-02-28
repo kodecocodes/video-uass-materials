@@ -78,7 +78,7 @@ struct ListCellView: View {
           + " on Background color \(self.contrast.bkgd.accDescription)."))
           .font(.caption)
           .padding(2)
-        .background(Color(.white))
+        .background(Color(.systemBackground))
           .cornerRadius(5)
       }
       .accessibilityElement(children: .contain)

@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ struct ColorModel {
   var r: Double
   var g: Double
   var b: Double
-  
+
   var rInt: String { String(Int(0.5 + r * 255.0)) }
   var gInt: String { String(Int(0.5 + g * 255.0)) }
   var bInt: String { String(Int(0.5 + b * 255.0)) }
@@ -53,13 +53,13 @@ struct ColorModel {
 struct ContrastModel {
   var bkgd: ColorModel
   var text: ColorModel
-  
+
   func ratio() -> String {
     let rgbText = RGB(r: text.r, g: text.g, b: text.b)
     let rgbBkgd = RGB(r: bkgd.r, g: bkgd.g, b: bkgd.b)
     return String(format: "%.2f", contrastRatio(rgb1: rgbText, rgb2: rgbBkgd))
   }
-  
+
   private func contrastRatio(rgb1: RGB, rgb2: RGB) -> Double {
     let ratio = (rgb1.luminance + 0.05) / (rgb2.luminance + 0.05)
     return ratio < 1.0 ? 1.0/ratio : ratio

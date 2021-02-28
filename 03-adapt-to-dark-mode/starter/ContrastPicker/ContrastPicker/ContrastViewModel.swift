@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,7 @@ import SwiftUI
 
 class ContrastViewModel: ObservableObject {
   @Published var contrasts: [ContrastModel] = []
-  
+
   init(count: Int) {
     for _ in 0 ..< count {
       contrasts.append(ContrastModel(
@@ -45,7 +45,7 @@ class ContrastViewModel: ObservableObject {
       )
     }
   }
-  
+
   private func randomColor() -> Color {
     Color(red: Double.random(in: 0..<1),
           green: Double.random(in: 0..<1),

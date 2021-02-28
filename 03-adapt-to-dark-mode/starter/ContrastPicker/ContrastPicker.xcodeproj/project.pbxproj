@@ -13,7 +13,6 @@
 		CDB0B97A238770E6006DC0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB0B979238770E6006DC0CD /* Assets.xcassets */; };
 		CDB0B97D238770E6006DC0CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB0B97C238770E6006DC0CD /* Preview Assets.xcassets */; };
 		CDB0BB522389F7CB006DC0CD /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0BB512389F7CB006DC0CD /* RGB.swift */; };
-		CDB0BB54238A003B006DC0CD /* AdaptingStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0BB53238A003A006DC0CD /* AdaptingStack.swift */; };
 		CDB0BB56238A2068006DC0CD /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0BB55238A2068006DC0CD /* ColorPicker.swift */; };
 		CDBCAB55238B2ADF0089E25F /* ContrastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBCAB54238B2ADF0089E25F /* ContrastViewModel.swift */; };
 		CDBCAB57238B2C230089E25F /* ContrastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBCAB56238B2C230089E25F /* ContrastModel.swift */; };
@@ -29,7 +28,6 @@
 		CDB0B97C238770E6006DC0CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDB0B981238770E6006DC0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB0BB512389F7CB006DC0CD /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
-		CDB0BB53238A003A006DC0CD /* AdaptingStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptingStack.swift; sourceTree = "<group>"; };
 		CDB0BB55238A2068006DC0CD /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		CDBCAB54238B2ADF0089E25F /* ContrastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastViewModel.swift; sourceTree = "<group>"; };
 		CDBCAB56238B2C230089E25F /* ContrastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastModel.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				CDB0BB512389F7CB006DC0CD /* RGB.swift */,
-				CDB0BB53238A003A006DC0CD /* AdaptingStack.swift */,
 				CDB0B975238770DE006DC0CD /* SceneDelegate.swift */,
 				CDB0B973238770DE006DC0CD /* AppDelegate.swift */,
 				CDB0B979238770E6006DC0CD /* Assets.xcassets */,
@@ -125,7 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					CDB0B96F238770DE006DC0CD = {
@@ -169,7 +166,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB0BB54238A003B006DC0CD /* AdaptingStack.swift in Sources */,
 				CDB0B974238770DE006DC0CD /* AppDelegate.swift in Sources */,
 				CDBCAB57238B2C230089E25F /* ContrastModel.swift in Sources */,
 				CDB0B976238770DE006DC0CD /* SceneDelegate.swift in Sources */,
@@ -209,6 +205,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -269,6 +266,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

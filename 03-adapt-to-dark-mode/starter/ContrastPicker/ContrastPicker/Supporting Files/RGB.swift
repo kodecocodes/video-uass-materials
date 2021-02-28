@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -32,20 +32,19 @@ public class RGB: ObservableObject {
   let r: Double
   let g: Double
   let b: Double
-  
+
   var luminance: Double {
     0.2126 * lum(r) + 0.7152 * lum(g) + 0.0722 * lum(b)
   }
-  
+
   private func lum(_ value: Double) -> Double {
     value <= 0.03928 ? value/12.92
       : pow((value + 0.055)/1.055, 2.4)
   }
-  
+
   init(r: Double, g: Double, b: Double) {
     self.r = r
     self.g = g
     self.b = b
   }
 }
-

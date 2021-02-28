@@ -33,6 +33,7 @@
 import SwiftUI
 
 struct ContrastListView: View {
+  @Environment(\.accessibilityInvertColors) var invertColors
   @ObservedObject var viewModel = ContrastViewModel(count: 9)
 
   var body: some View {
@@ -41,6 +42,12 @@ struct ContrastListView: View {
         ListCellView(contrast: self.$viewModel.contrasts[index])
       }
       .navigationBarTitle("Contrast Ratios")
+      .alert(isPresented: .constant(invertColors)) {
+        Alert(
+          title: Text("Please Turn Off Smart Invert"),
+          message: Text("This app doesn't work with Smart Invert."
+            + " Dark mode is OK."))
+      }
     }
   }
 }

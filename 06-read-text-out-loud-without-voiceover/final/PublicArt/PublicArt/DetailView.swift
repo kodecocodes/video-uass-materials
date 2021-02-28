@@ -30,10 +30,15 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import AVFoundation
 import SwiftUI
 
 struct DetailView: View {
   let artwork: Artwork
+  let speaker = AVSpeechSynthesizer()
+  var utterance: AVSpeechUtterance {
+    AVSpeechUtterance(string: artwork.description)
+  }
 
   var body: some View {
     VStack {
@@ -48,6 +53,23 @@ struct DetailView: View {
         .font(.subheadline)
       Divider()
       ScrollView {
+        HStack {
+          Button("Speak") {
+            if self.speaker.isPaused {
+              self.speaker.continueSpeaking()
+            } else {
+              self.speaker.speak(self.utterance)
+            }
+          }
+          Button("Pause") {
+            if self.speaker.isSpeaking {
+              self.speaker.pauseSpeaking(at: .word)
+            }
+          }
+          Button("Stop") {
+            self.speaker.stopSpeaking(at: .word)
+          }
+        }
         Text(artwork.description)
           .font(.body)
       }
@@ -59,6 +81,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView(artwork: artData[0])
+    DetailView(artwork: artData[1])
   }
 }

@@ -46,8 +46,6 @@ struct ContentView: View {
         }
       }
       .navigationBarTitle("Artworks")
-
-      DetailView(artwork: artworks[0])
     }
     .padding(1)
   }

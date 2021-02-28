@@ -43,10 +43,8 @@ struct ContrastListView: View {
       }
       .navigationBarTitle("Contrast Ratios")
       .alert(isPresented: .constant(invertColors)) {
-        Alert(
-          title: Text("Please Turn Off Smart Invert"),
-          message: Text("This app doesn't work with Smart Invert."
-            + " Dark mode is OK."))
+        Alert(title: Text("Please turn off Smart Invert."),
+              message: Text("Smart Invert does not work. \nDark Mode is okay."))
       }
     }
   }
